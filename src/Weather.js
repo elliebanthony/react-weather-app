@@ -37,7 +37,7 @@ export default function Weather() {
           <button> Enter </button>
         </form>
         <h2> {city}</h2>
-        <br />
+        <h3> </h3>
         <h4> {Math.round(weather.temp)} °C</h4>
         <img src={weather.icon} alt="current state" />
         <div className="current"> {weather.description} </div>
