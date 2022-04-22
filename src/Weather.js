@@ -69,15 +69,9 @@ export default function Weather() {
           alt="Clear"
           id="icon"
         />
-        <div className="current" id="state">
-          Clear
-        </div>
-        <div className="wind" id="windSpeed">
-          Wind Speed: 0 mph
-        </div>
-        <div className="humidity" id="humid">
-          Humidity: 10%
-        </div>
+        <div className="current">Clear</div>
+        <div className="wind">Wind Speed: 0 mph</div>
+        <div className="humidity">Humidity: 10%</div>
       </div>
     );
 }
