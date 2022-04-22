@@ -15,13 +15,14 @@ export default function FormatDate(props) {
   let minutes = props.date.getMinutes();
   if (minutes < 10) {
     minutes = `0 ${minutes}`;
+  } else {
+    return (
+      <div>
+        <h3>
+          {" "}
+          {day}, {hours}:{minutes}
+        </h3>
+      </div>
+    );
   }
-  return (
-    <div>
-      <h3>
-        {" "}
-        {day}, {hours}:{minutes}
-      </h3>
-    </div>
-  );
 }
