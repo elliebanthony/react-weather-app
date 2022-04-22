@@ -37,11 +37,12 @@ export default function Weather() {
           <button> Enter </button>
         </form>
         <h2> {city}</h2>
-        <h4>Temperature: {Math.round(weather.temp)} °C</h4>
+        <br />
+        <h4> {Math.round(weather.temp)} °C</h4>
         <img src={weather.icon} alt="current state" />
-        <div> Description:{weather.description} </div>
-        <div> Wind Speed: {Math.round(weather.wind)} km/h</div>
-        <div> Humidity: {weather.humidity} % </div>{" "}
+        <div className="current"> {weather.description} </div>
+        <div className="wind"> Wind Speed: {Math.round(weather.wind)} km/h</div>
+        <div className="humidity"> Humidity: {weather.humidity} % </div>{" "}
       </div>
     );
   else
