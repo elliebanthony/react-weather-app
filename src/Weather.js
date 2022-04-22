@@ -11,6 +11,7 @@ export default function Weather() {
     changeWeather({
       temp: response.data.main.temp,
       description: response.data.weather[0].description,
+      date: new Date(response.data.dt * 1000),
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
@@ -38,7 +39,7 @@ export default function Weather() {
           <button> Enter </button>
         </form>
         <h2> {city}</h2>
-        <FormatDate date={new Date(response.data.dt * 1000)} />
+        <FormatDate date={changeWeather.date} />
         <h4> {Math.round(weather.temp)} °C</h4>
         <img src={weather.icon} alt="current state" />
         <div className="current"> {weather.description} </div>
