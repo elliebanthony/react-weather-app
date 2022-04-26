@@ -17,33 +17,37 @@ export default function TempDegree(props) {
   }
   if (unit === "celcius") {
     return (
-      <div>
+      <span>
         {" "}
         {celcTemp}
         <span className="Unit">
           {" "}
-          °C |{" "}
+          <a href="/" onClick={celcTemp}>
+            °C |{" "}
+          </a>
           <a href="/" onClick={fahrTemp}>
             {" "}
             °F{" "}
           </a>
         </span>
-      </div>
+      </span>
     );
   } else {
     return (
-      <div>
+      <span>
         {" "}
-        {Math.round(fahrConvert())}{" "}
+        / {Math.round(fahrConvert())}
         <span className="Unit">
           {" "}
-          °C |{" "}
+          <a href="/" onClick={celcTemp}>
+            °C |{" "}
+          </a>
           <a href="/" onClick={fahrTemp}>
             {" "}
             °F{" "}
           </a>
         </span>{" "}
-      </div>
+      </span>
     );
   }
 }

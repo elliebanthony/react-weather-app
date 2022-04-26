@@ -72,7 +72,7 @@ export default function Weather() {
         </form>
         <h2> Williamson, NY</h2>
         <h3>Last Updated: Thursday, 10:00</h3>
-        <h4>°F / °C</h4>
+        <h4>°C / °F</h4>
         <img
           src="https://openweathermap.org/img/wn/10d@2x.png"
           alt="Clear"
