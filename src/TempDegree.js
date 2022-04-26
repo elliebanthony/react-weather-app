@@ -19,7 +19,7 @@ export default function TempDegree(props) {
     return (
       <div>
         {" "}
-        {Math.round(celcTemp)}
+        {celcTemp}
         <span className="Unit">
           {" "}
           °C |{" "}
