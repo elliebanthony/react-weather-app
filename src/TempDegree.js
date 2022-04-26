@@ -34,7 +34,7 @@ export default function TempDegree(props) {
     return (
       <div>
         {" "}
-        {Math.round(fahrConvert)}{" "}
+        {Math.round(fahrConvert())}{" "}
         <span className="Unit">
           {" "}
           °C |{" "}
