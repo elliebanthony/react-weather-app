@@ -12,19 +12,13 @@ export default function TempDegree(props) {
     event.preventDefault();
     setUnit("celcius");
   }
-  function fahrConvert() {
-    return (props.celcius * 9) / 5 + 32;
-  }
+
   if (unit === "celcius") {
     return (
       <span>
-        {" "}
-        {celcTemp}
+        <span> {celcTemp} °C | </span>
         <span className="Unit">
           {" "}
-          <a href="/" onClick={celcTemp}>
-            °C |{" "}
-          </a>
           <a href="/" onClick={fahrTemp}>
             {" "}
             °F{" "}
@@ -33,18 +27,14 @@ export default function TempDegree(props) {
       </span>
     );
   } else {
+    let fahr = (props.celcius * 9) / 5 + 32;
     return (
       <span>
-        {" "}
-        / {Math.round(fahrConvert())}
+        <span> {Math.round(fahr)} °F</span>
         <span className="Unit">
           {" "}
           <a href="/" onClick={celcTemp}>
-            °C |{" "}
-          </a>
-          <a href="/" onClick={fahrTemp}>
-            {" "}
-            °F{" "}
+            °C{" "}
           </a>
         </span>{" "}
       </span>
