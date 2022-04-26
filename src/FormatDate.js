@@ -21,7 +21,7 @@ export default function FormatDate() {
   return (
     <div>
       {" "}
-      {day}, {hours}:{minutes}
+      Last Updated: {day}, {hours}:{minutes}
     </div>
   );
 }
