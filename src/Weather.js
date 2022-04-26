@@ -65,7 +65,6 @@ export default function Weather() {
           />
           <button> Enter </button>
         </form>
-        <br />
         <h2> Williamson, NY</h2>
         <h3>Last Updated: Thursday, 10:00</h3>
         <h4>
