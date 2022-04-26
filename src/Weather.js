@@ -49,7 +49,7 @@ export default function Weather() {
         </h3>
         <h4>
           {" "}
-          {Math.round(weather.temp)} <TempDegree celcius={weather.temp} />{" "}
+          <TempDegree celcius={weather.temp} />{" "}
         </h4>
         <img src={weather.icon} alt="current state" />
         <div className="current"> {weather.description} </div>
