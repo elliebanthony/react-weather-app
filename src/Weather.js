@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import FormatDate from "./FormatDate";
+import TempDegree from "./TempDegree";
+
 export default function Weather() {
   const [city, changeCity] = useState(null);
   const [weather, changeWeather] = useState("");
@@ -45,7 +47,10 @@ export default function Weather() {
           {" "}
           <FormatDate />{" "}
         </h3>
-        <h4> {Math.round(weather.temp)} °C</h4>
+        <h4>
+          {" "}
+          {Math.round(weather.temp)} <TempDegree celcius={weather.temp} />{" "}
+        </h4>
         <img src={weather.icon} alt="current state" />
         <div className="current"> {weather.description} </div>
         <div className="wind"> Wind Speed: {Math.round(weather.wind)} km/h</div>
