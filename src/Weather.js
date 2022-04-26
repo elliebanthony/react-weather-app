@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import FormatDate from "./FormatDate";
-
 export default function Weather() {
   const [city, changeCity] = useState(null);
   const [weather, changeWeather] = useState("");
@@ -11,7 +10,6 @@ export default function Weather() {
     changeWeather({
       temp: response.data.main.temp,
       description: response.data.weather[0].description,
-      date: new Date(response.data.dt * 1000),
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
@@ -19,13 +17,17 @@ export default function Weather() {
   }
   function submitCity(event) {
     event.preventDefault();
+    search();
     afterEnter(true);
+  }
+  function onSubmit(event) {
+    event.preventDefault();
+    changeCity(event.target.value);
+  }
+  function search() {
     let apiKey = "61585f15453918f9f78604040a26d7b6";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showWeather);
-  }
-  function onSubmit(event) {
-    changeCity(event.target.value);
   }
   if (enter === true)
     return (
@@ -39,7 +41,10 @@ export default function Weather() {
           <button> Enter </button>
         </form>
         <h2> {city}</h2>
-        <FormatDate date={weather.date} />
+        <h3>
+          {" "}
+          <FormatDate />{" "}
+        </h3>
         <h4> {Math.round(weather.temp)} °C</h4>
         <img src={weather.icon} alt="current state" />
         <div className="current"> {weather.description} </div>
