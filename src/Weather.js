@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import axios from "axios";
 import FormatDate from "./FormatDate";
 import TempDegree from "./TempDegree";
+import Forecast from "./Forecast";
 
-export default function Weather() {
-  const [city, changeCity] = useState(null);
-  const [weather, changeWeather] = useState("");
-  const [enter, afterEnter] = useState("false");
+export default function Weather(props) {
+  const [city, changeCity] = useState(props.defaultCity);
+  const [weather, changeWeather] = useState({ ready: false });
 
   function showWeather(response) {
     changeWeather({
+      ready: true,
       temp: response.data.main.temp,
+      coordinates: response.data.coord,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
@@ -20,7 +22,6 @@ export default function Weather() {
   function submitCity(event) {
     event.preventDefault();
     search();
-    afterEnter(true);
   }
   function onSubmit(event) {
     event.preventDefault();
@@ -31,7 +32,7 @@ export default function Weather() {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showWeather);
   }
-  if (enter === true)
+  if (weather.ready)
     return (
       <div>
         <form onSubmit={submitCity}>
@@ -54,7 +55,8 @@ export default function Weather() {
         <img src={weather.icon} alt="current state" />
         <div className="current"> {weather.description} </div>
         <div className="wind"> Wind Speed: {Math.round(weather.wind)} km/h</div>
-        <div className="humidity"> Humidity: {weather.humidity} % </div>{" "}
+        <div className="humidity"> Humidity: {weather.humidity} % </div> <br />
+        <Forecast coordinates={weather.coordinates} />
       </div>
     );
   else
