@@ -74,11 +74,6 @@ export default function Weather(props) {
           />
           <button> Enter </button>
         </form>
-        <h2> Enter City </h2>
-        <h3>
-          <FormatDate />{" "}
-        </h3>
-        <h4>°F</h4>
       </div>
     );
 }

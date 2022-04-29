@@ -16,7 +16,7 @@ export default function FormatDate() {
   let minutes = now.getMinutes();
 
   if (minutes < 10) {
-    minutes = `0 ${minutes}`;
+    minutes = `0${minutes}`;
   }
   return (
     <div>
