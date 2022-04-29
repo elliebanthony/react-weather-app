@@ -8,7 +8,6 @@ function App() {
       <div className="container">
         <h1>Today's Forecast</h1>
         <Weather />
-        <br />
       </div>
       <Footer />
     </div>
