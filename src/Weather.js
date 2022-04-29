@@ -55,8 +55,10 @@ export default function Weather(props) {
         <img src={weather.icon} alt="current state" />
         <div className="current"> {weather.description} </div>
         <div className="wind"> Wind Speed: {Math.round(weather.wind)} km/h</div>
-        <div className="humidity"> Humidity: {weather.humidity} % </div> <br />
-        <WeatherForecast coordinates={weather.coordinates} />
+        <div className="humidity"> Humidity: {weather.humidity} % </div>
+        <div className="row">
+          <WeatherForecast coordinates={weather.coordinates} />
+        </div>
       </div>
     );
   else
