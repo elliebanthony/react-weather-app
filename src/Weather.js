@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import FormatDate from "./FormatDate";
 import TempDegree from "./TempDegree";
-import Forecast from "./Forecast";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [city, changeCity] = useState(props.defaultCity);
@@ -56,7 +56,7 @@ export default function Weather(props) {
         <div className="current"> {weather.description} </div>
         <div className="wind"> Wind Speed: {Math.round(weather.wind)} km/h</div>
         <div className="humidity"> Humidity: {weather.humidity} % </div> <br />
-        <Forecast coordinates={weather.coordinates} />
+        <WeatherForecast coordinates={weather.coordinates} />
       </div>
     );
   else

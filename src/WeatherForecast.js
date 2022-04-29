@@ -1,27 +1,24 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export default function Forecast(props) {
-  const { loaded, setLoaded } = useState(false);
-  const { forecast, setForecast } = useState(null);
+export default function WeatherForecast(props) {
+  let { loaded, setLoaded } = useState(false);
+  let { forecast, setForecast } = useState(null);
+
   function displayForecast(response) {
-    setLoaded(true);
     setForecast(response.data.daily);
+    setLoaded(true);
   }
   if (loaded) {
     return (
       <div className="row">
         <div className="col-2">
-          <div className="day">Friday</div>
-          <img
-            src="https://openweathermap.org/img/wn/10d@2x.png"
-            alt="Clear"
-            id="icon"
-          />
+          <div className="day">{forecast[0].dt} </div>
+          <img src={forecast[0].weather[0].icon} alt="Clear" id="icon" />
           <div className="highLow">
             {" "}
-            <span> H: 10°C </span>
-            <span> L: 5°C </span>
+            <span> {forecast[0].temp.max} </span>
+            <span> {forecast[0].temp.min} </span>
           </div>
         </div>
       </div>
