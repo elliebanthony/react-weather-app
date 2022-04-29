@@ -3,8 +3,8 @@ import axios from "axios";
 import ForecastDay from "./ForecastDay";
 
 export default function WeatherForecast(props) {
-  const [loaded, setLoaded] = useState(false);
-  const [forecast, setForecast] = useState(null);
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
 
   function displayForecast(response) {
     setForecast(response.data.daily);
@@ -13,8 +13,19 @@ export default function WeatherForecast(props) {
   if (loaded) {
     return (
       <div>
-        {" "}
-        <ForecastDay data={forecast[0]} />{" "}
+        <div className="row">
+          {" "}
+          {forecast.map(function (dailyForecast, index) {
+            if (index < 5) {
+              return (
+                <div key={index} className="col-3">
+                  <ForecastDay data={dailyForecast} />
+                </div>
+              );
+            }
+            return null;
+          })}
+        </div>
       </div>
     );
   } else {
