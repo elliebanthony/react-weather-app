@@ -29,7 +29,7 @@ export default function Weather(props) {
   }
   function search() {
     let apiKey = "61585f15453918f9f78604040a26d7b6";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(showWeather);
   }
   if (weather.ready)
@@ -50,7 +50,7 @@ export default function Weather(props) {
         </h3>
         <h4>
           {" "}
-          <TempDegree celcius={weather.temp} />{" "}
+          <TempDegree fahr={weather.temp} />{" "}
         </h4>
         <img src={weather.icon} alt="current state" />
         <div className="current"> {weather.description} </div>
