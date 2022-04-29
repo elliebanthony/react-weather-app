@@ -9,6 +9,10 @@ export default function ForecastDay(props) {
     let min = Math.round(props.data.temp.min);
     return ` L:${min} °C`;
   }
+  function icon() {
+    let iconSrc = `https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`;
+    return iconSrc;
+  }
   function day() {
     let date = new Date(props.data.dt * 1000);
     let day = date.getDay();
@@ -20,7 +24,7 @@ export default function ForecastDay(props) {
     <div className="row">
       <div className="col-2">
         <div className="day"> {day()} </div>
-        <img src={props.data.weather[0].icon} alt="Clear" id="icon" />
+        <img src={icon()} alt="Clear" id="icon" />
         <div className="highLow">
           {" "}
           <span> {maxTemp()}</span>
