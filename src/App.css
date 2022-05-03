@@ -1,6 +1,8 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  margin: 0 auto;
+  max-width: 65%;
 }
 .container {
   background: radial-gradient(
@@ -8,10 +10,8 @@
     rgb(47, 232, 244) 0.1%,
     rgba(160, 244, 202, 0.86) 57.5%
   );
-
   padding: 10px;
   border-radius: 20px;
-  margin: 0 auto;
 }
 .card-header {
   font-weight: bold;
