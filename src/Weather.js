@@ -3,7 +3,7 @@ import axios from "axios";
 import FormatDate from "./FormatDate";
 import TempDegree from "./TempDegree";
 import WeatherForecast from "./WeatherForecast";
-import "./App.css";
+import "./Weather.css";
 
 export default function Weather(props) {
   const [city, changeCity] = useState(props.defaultCity);
@@ -73,7 +73,7 @@ export default function Weather(props) {
             autoComplete="off"
             autoFocus="on"
           />
-          <button> Enter </button>
+          <button className="m-1 rounded-pill shadow-lg"> Enter </button>
         </form>
       </div>
     );
