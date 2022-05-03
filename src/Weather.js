@@ -45,7 +45,7 @@ export default function Weather(props) {
           <button className="m-1 rounded-pill shadow-lg"> Enter </button>
         </form>
         <div className="row m-2 p-3">
-          <div className="col-4">
+          <div className="col-5">
             <h2> {city}</h2>
             <h3>
               {" "}
@@ -56,7 +56,7 @@ export default function Weather(props) {
               <TempDegree fahr={weather.temp} />{" "}
             </h4>
           </div>
-          <div className="col-8">
+          <div className="col-7">
             <img src={weather.icon} alt="current state" className="img-fluid" />
             <div className="current"> {weather.description} </div>
             <div className="wind">
@@ -73,7 +73,7 @@ export default function Weather(props) {
     );
   else
     return (
-      <div>
+      <div className="weather">
         <form onSubmit={submitCity}>
           <input
             type="search"

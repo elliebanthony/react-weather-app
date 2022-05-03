@@ -4,47 +4,44 @@ form {
 }
 button {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(253, 183, 220);
+  background-color: lightcoral;
+  font-style: italic;
 }
 .weather h2 {
-  width: 100%;
   font-family: "Poppins", sans-serif;
-  color: lightpink;
-  margin: 0 auto;
-  display: block;
-  font-size: 40px;
+  color: lightcoral;
+  font-size: 23px;
   font-weight: bolder;
-  margin-top: 10px;
 }
 .weather h3 {
-  color: lightpink;
+  color: lightcoral;
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   text-align: center;
 }
 .weather h4 {
   font-family: "Poppins", sans-serif;
-  color: lightpink;
-  font-size: 30px;
+  color: lightcoral;
+  font-size: 20px;
   text-align: center;
-  margin: 10px;
+  margin-top: 30px;
 }
 .current {
   text-align: center;
-  color: lightgreen;
+  color: lightseagreen;
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   margin: 5px;
 }
 .wind {
-  color: lightskyblue;
+  color: lightseagreen;
   font-style: italic;
   display: flex;
   justify-content: space-evenly;
 }
 
 .humidity {
-  color: lightpink;
+  color: lightseagreen;
   font-style: italic;
   display: flex;
   justify-content: space-evenly;
@@ -52,11 +49,8 @@ button {
 .weather .row {
   font-family: "Poppins", sans-serif;
   padding: 10px;
-  color: lightskyblue;
+  color: lightcoral;
   background-color: white;
   margin: 0 auto;
   border-radius: 20px;
-}
-.Unit {
-  color: lightskyblue;
 }

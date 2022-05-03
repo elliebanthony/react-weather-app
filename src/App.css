@@ -2,22 +2,22 @@
   font-family: sans-serif;
   text-align: center;
   margin: 0 auto;
-  width: 350px;
+  width: 400px;
 }
 .container {
   background: radial-gradient(
     circle at 10% 20%,
-    rgb(47, 232, 244) 0.1%,
-    rgba(160, 244, 202, 0.86) 57.5%
+    rgb(253, 239, 132) 0%,
+    rgb(247, 198, 169) 54.2%,
+    rgb(21, 186, 196) 100.3%
   );
   padding: 10px;
   border-radius: 20px;
 }
 .card-header {
   font-weight: bold;
-  font-size: 30px;
   font-family: "Poppins", sans-serif;
-  color: lightseagreen;
+  color: lightcoral;
 }
 .link {
   text-decoration: none;
@@ -26,5 +26,5 @@
 footer {
   text-align: center;
   font-family: "Poppins", sans-serif;
-  color: rgb(253, 183, 220);
+  color: lightcoral;
 }
