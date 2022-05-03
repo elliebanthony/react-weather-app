@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import FormatDate from "./FormatDate";
-import TempDegree from "./TempDegree";
-import WeatherForecast from "./WeatherForecast";
+import WeatherInfo from "./WeatherInfo";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -20,11 +18,11 @@ export default function Weather(props) {
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
-  function submitCity(event) {
+  function submitSearch(event) {
     event.preventDefault();
     search();
   }
-  function onSubmit(event) {
+  function updateCity(event) {
     event.preventDefault();
     changeCity(event.target.value);
   }
@@ -36,13 +34,13 @@ export default function Weather(props) {
   if (weather.ready)
     return (
       <div className="weather">
-        <form onSubmit={submitCity}>
+        <form onSubmit={submitSearch}>
           <input
             type="search"
             autoFocus="on"
             placeholder="Search for a city"
             className="form-control"
-            onChange={onSubmit}
+            onChange={updateCity}
           />
           <input
             type="submit"
@@ -50,31 +48,7 @@ export default function Weather(props) {
             className="m-1 btn btn-primary shadow-sm"
           />
         </form>
-        <div className="row m-2 p-3">
-          <div className="col-5">
-            <h2> {city}</h2>
-            <h3>
-              {" "}
-              <FormatDate />{" "}
-            </h3>
-            <h4>
-              {" "}
-              <TempDegree fahr={weather.temp} />{" "}
-            </h4>
-          </div>
-          <div className="col-7">
-            <img src={weather.icon} alt="current state" className="img-fluid" />
-            <div className="current"> {weather.description} </div>
-            <div className="wind">
-              {" "}
-              Wind Speed: {Math.round(weather.wind)} km/h
-            </div>
-            <div className="humidity"> Humidity: {weather.humidity} % </div>
-          </div>
-        </div>
-        <div className="flex-sm-row">
-          <WeatherForecast coordinates={weather.coordinates} />
-        </div>
+        <WeatherInfo data={weather} />
       </div>
     );
   else {
