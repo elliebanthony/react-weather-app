@@ -39,13 +39,12 @@ export default function Weather(props) {
             type="search"
             autoFocus="on"
             placeholder="Search for a city"
-            className="form-control"
             onChange={updateCity}
           />
           <input
             type="submit"
             value="Search"
-            className="m-1 btn btn-primary shadow-sm"
+            className="m-1 btn btn-light shadow-sm"
           />
         </form>
         <WeatherInfo data={weather} />
