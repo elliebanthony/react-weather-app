@@ -6,10 +6,8 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="card">
-          <h1 className="card-header">Today's Forecast</h1>
-          <Weather />
-        </div>
+        <h1 className="card-header">Today's Forecast</h1>
+        <Weather />
       </div>
       <Footer />
     </div>
