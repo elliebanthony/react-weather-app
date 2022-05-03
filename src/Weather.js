@@ -84,6 +84,18 @@ export default function Weather(props) {
           />
           <button className="m-1 rounded-pill shadow-lg"> Enter </button>
         </form>
+        <div className="row">
+          <div className="col-5">
+            <h2 className="mt-4"> New York </h2>
+          </div>
+          <div className="col-7">
+            <img
+              src="https://openweathermap.org/img/wn/10d@2x.png"
+              alt="Clear"
+              id="icon"
+            />
+          </div>
+        </div>
       </div>
     );
 }

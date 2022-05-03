@@ -3,11 +3,11 @@ import React from "react";
 export default function ForecastDay(props) {
   function maxTemp() {
     let max = Math.round(props.data.temp.max);
-    return ` H:${max} °F`;
+    return `${max} °F`;
   }
   function minTemp() {
     let min = Math.round(props.data.temp.min);
-    return ` L:${min} °F`;
+    return `${min} °F`;
   }
   function icon() {
     let iconSrc = `https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`;
@@ -28,6 +28,7 @@ export default function ForecastDay(props) {
         <div className="highLow">
           {" "}
           <span> {maxTemp()}</span>
+          <hr />
           <span> {minTemp()}</span>
         </div>
       </div>
