@@ -35,7 +35,7 @@ export default function Weather(props) {
   }
   if (weather.ready)
     return (
-      <div className="Weather-results">
+      <div className="weather">
         <form onSubmit={submitCity}>
           <input
             type="search"
@@ -53,11 +53,11 @@ export default function Weather(props) {
           {" "}
           <TempDegree fahr={weather.temp} />{" "}
         </h4>
-        <img src={weather.icon} alt="current state" />
+        <img src={weather.icon} alt="current state" className="img-fluid" />
         <div className="current"> {weather.description} </div>
         <div className="wind"> Wind Speed: {Math.round(weather.wind)} km/h</div>
         <div className="humidity"> Humidity: {weather.humidity} % </div>
-        <div className="row">
+        <div className="flex-sm-row">
           <WeatherForecast coordinates={weather.coordinates} />
         </div>
       </div>

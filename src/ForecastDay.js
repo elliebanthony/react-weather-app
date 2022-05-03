@@ -21,10 +21,10 @@ export default function ForecastDay(props) {
     return days[day];
   }
   return (
-    <div className="row">
+    <div className=" d-flex flex-sm-row">
       <div className="col">
         <div className="day"> {day()} </div>
-        <img src={icon()} alt="Clear" id="icon" />
+        <img src={icon()} alt="Clear" id="icon" className="img-fluid" />
         <div className="highLow">
           {" "}
           <span> {maxTemp()}</span>

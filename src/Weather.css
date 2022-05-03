@@ -1,12 +1,12 @@
 form {
-  text-align: left;
+  text-align: center;
   padding: 10px;
 }
-.Weather-results button {
+button {
   font-family: "Poppins", sans-serif;
   background-color: rgb(253, 183, 220);
 }
-.Weather-results h2 {
+.weather h2 {
   width: 100%;
   font-family: "Poppins", sans-serif;
   color: lightsalmon;
@@ -16,22 +16,18 @@ form {
   font-weight: bolder;
   margin-top: 10px;
 }
-h3 {
+.weather h3 {
   color: lightsalmon;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  text-align: left;
+  text-align: center;
 }
-h4 {
+.weather h4 {
   font-family: "Poppins", sans-serif;
   color: lightsalmon;
   font-size: 30px;
   text-align: center;
   margin: 10px;
-}
-img {
-  display: block;
-  margin: 0 auto;
 }
 .current {
   text-align: center;
@@ -53,7 +49,7 @@ img {
   display: flex;
   justify-content: space-evenly;
 }
-.Weather-results .row {
+.weather .row {
   font-family: "Poppins", sans-serif;
   padding: 10px;
   color: lightsalmon;
@@ -61,7 +57,7 @@ img {
   margin: 0 auto;
   border-radius: 20px;
 }
-.forecast-date {
+.weather .forecast-date {
   text-align: center;
   margin: 0 auto;
 }
@@ -73,15 +69,6 @@ img {
 .forecast-temp {
   text-align: center;
   margin: 0 auto;
-}
-footer {
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  color: rgb(253, 183, 220);
-}
-a {
-  text-decoration: none;
-  color: lightseagreen;
 }
 .Unit {
   color: lightsalmon;
