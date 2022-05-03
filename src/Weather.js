@@ -23,7 +23,6 @@ export default function Weather(props) {
     search();
   }
   function updateCity(event) {
-    event.preventDefault();
     changeCity(event.target.value);
   }
   function search() {
