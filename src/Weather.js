@@ -25,7 +25,6 @@ export default function Weather(props) {
     search();
   }
   function onSubmit(event) {
-    event.preventDefault();
     changeCity(event.target.value);
   }
   function search() {
@@ -71,31 +70,8 @@ export default function Weather(props) {
         </div>
       </div>
     );
-  else
-    return (
-      <div className="weather">
-        <form onSubmit={submitCity}>
-          <input
-            type="search"
-            placeholder="Search for a city"
-            onChange={onSubmit}
-            autoComplete="off"
-            autoFocus="on"
-          />
-          <button className="m-1 rounded-pill shadow-lg"> Enter </button>
-        </form>
-        <div className="row">
-          <div className="col-5">
-            <h2 className="mt-4"> New York </h2>
-          </div>
-          <div className="col-7">
-            <img
-              src="https://openweathermap.org/img/wn/10d@2x.png"
-              alt="Clear"
-              id="icon"
-            />
-          </div>
-        </div>
-      </div>
-    );
+  else {
+    search();
+  }
+  return "Loading...";
 }
