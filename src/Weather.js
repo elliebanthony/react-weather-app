@@ -35,14 +35,14 @@ export default function Weather(props) {
   }
   if (weather.ready)
     return (
-      <div>
+      <div className="Weather-results">
         <form onSubmit={submitCity}>
           <input
             type="search"
             placeholder="Search for a city"
             onChange={onSubmit}
           />
-          <button> Enter </button>
+          <button className="m-1 rounded-pill shadow-lg"> Enter </button>
         </form>
         <h2> {city}</h2>
         <h3>

@@ -11,13 +11,11 @@
 
   padding: 10px;
   border-radius: 20px;
-
   margin: 0 auto;
 }
 .title {
-  position: relative;
+  font-weight: bold;
   font-size: 30px;
-  width: 100%;
   font-family: "Poppins", sans-serif;
   margin: 0 auto;
   color: lightseagreen;
