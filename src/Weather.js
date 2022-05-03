@@ -3,6 +3,7 @@ import axios from "axios";
 import FormatDate from "./FormatDate";
 import TempDegree from "./TempDegree";
 import WeatherForecast from "./WeatherForecast";
+import "./App.css";
 
 export default function Weather(props) {
   const [city, changeCity] = useState(props.defaultCity);
