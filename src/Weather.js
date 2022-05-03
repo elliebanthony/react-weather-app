@@ -25,6 +25,7 @@ export default function Weather(props) {
     search();
   }
   function onSubmit(event) {
+    event.preventDefault();
     changeCity(event.target.value);
   }
   function search() {
@@ -38,10 +39,16 @@ export default function Weather(props) {
         <form onSubmit={submitCity}>
           <input
             type="search"
+            autoFocus="on"
             placeholder="Search for a city"
+            className="form-control"
             onChange={onSubmit}
           />
-          <button className="m-1 rounded-pill shadow-lg"> Enter </button>
+          <input
+            type="submit"
+            value="Search"
+            className="m-1 btn btn-primary shadow-sm"
+          />
         </form>
         <div className="row m-2 p-3">
           <div className="col-5">

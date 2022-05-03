@@ -2,11 +2,6 @@ form {
   text-align: left;
   padding: 10px;
 }
-button {
-  font-family: "Poppins", sans-serif;
-  background-color: lightcoral;
-  font-style: italic;
-}
 .weather h2 {
   font-family: "Poppins", sans-serif;
   color: lightcoral;
